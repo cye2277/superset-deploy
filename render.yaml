@@ -6,3 +6,9 @@ services:
     envVars:
       - key: SUPERSET_SECRET_KEY
         value: your_super_secret_key
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        value: your_secure_password
+      - key: ADMIN_EMAIL
+        value: admin@example.com
