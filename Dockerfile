@@ -6,6 +6,9 @@ ENV FLASK_APP=superset
 # 複製自訂設定檔
 COPY superset_config.py ${SUPERSET_HOME}/superset_config.py
 
+# 安裝 PostgreSQL 驅動（必要）
+RUN pip install psycopg2-binary
+
 # 初始化 Superset 並建立管理者帳號
 CMD bash -c '\
   superset db upgrade && \
