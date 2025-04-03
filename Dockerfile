@@ -3,6 +3,10 @@ FROM apache/superset:latest
 ENV SUPERSET_HOME=/app/superset_home
 ENV FLASK_APP=superset
 
+# 複製自訂設定檔
+COPY superset_config.py ${SUPERSET_HOME}/superset_config.py
+
+
 # 自動建立帳號用到的變數
 ENV ADMIN_USERNAME=${ADMIN_USERNAME}
 ENV ADMIN_PASSWORD=${ADMIN_PASSWORD}
